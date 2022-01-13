@@ -6,12 +6,14 @@ const AddProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
+  const [image_url, setImage_url] = useState("");
 
   const addProductHandler = async (e) => {
     const data = {
       title: title,
       price: price,
       description: description,
+      image_url: image_url,
       published: true,
     };
     await axios.post("/api/products/addProduct", data);
@@ -46,6 +48,15 @@ const AddProduct = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               as="textarea"
+              rows={3}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Image URL</Form.Label>
+            <Form.Control
+              value={image_url}
+              onChange={(e) => setImage_url(e.target.value)}
+              type="text"
               rows={3}
             />
           </Form.Group>

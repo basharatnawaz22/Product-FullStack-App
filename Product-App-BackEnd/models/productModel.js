@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     published: {
       type: DataTypes.BOOLEAN,
     },
+    image_url: {
+      type: DataTypes.STRING,
+    },
   });
   return Product;
 };

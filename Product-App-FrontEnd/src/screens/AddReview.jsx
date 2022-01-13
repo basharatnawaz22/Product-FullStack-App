@@ -37,7 +37,7 @@ const AddReview = () => {
             <Form.Control
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              type="text"
+              as="textarea"
               rows={3}
             />
           </Form.Group>

@@ -14,6 +14,7 @@ const addProduct = async (req, res) => {
     description: req.body.description,
     price: req.body.price,
     published: req.body.published ? req.body.published : false,
+    image_url: req.body.image_url,
   };
 
   const product = await Product.create(info);
