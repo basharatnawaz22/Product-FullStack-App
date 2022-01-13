@@ -39,7 +39,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <h1 className="text-center mt-5">Product Details</h1>
+      <h1 className="text-center mt-4">Product Details</h1>
       <hr />
       <Container className="justify-conten-center">
         <Row>
