@@ -16,12 +16,13 @@ const AddReview = () => {
       description: description,
     };
     await axios.post(`/api/reviews/addreview/${id}`, data);
+    alert("Review is successfully added!");
   };
 
   return (
     <>
       <Container className="mt-5 p-2">
-        <h1 className="text-center">Add Product</h1>
+        <h1 className="text-center">Add Review</h1>
         <hr />
         <Form onSubmit={AddReviewHandler}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
