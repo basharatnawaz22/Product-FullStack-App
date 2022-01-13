@@ -5,10 +5,7 @@ const ProductCard = ({ product }) => {
   return (
     <>
       <Card className="shadow-lg m-1 p-2 rounded" style={{ width: "30rem" }}>
-        <Card.Img
-          src="https://m.media-amazon.com/images/I/617FFRO3vcL._SL1500_.jpg"
-          alt="Card image"
-        />
+        <Card.Img src={product.image_url} alt="Card image" />
         <Card.Body>
           <Card.Title>Title: {product.title}</Card.Title>
           <Card.Title>Price: ₹{product.price}</Card.Title>

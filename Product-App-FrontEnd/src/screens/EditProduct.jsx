@@ -8,6 +8,7 @@ const EditProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
+  const [image_url, setImage_url] = useState("");
 
   const { id } = useParams();
   // const history = useHistory();
@@ -21,6 +22,7 @@ const EditProduct = () => {
       setTitle(data.title);
       setPrice(data.price);
       setDescription(data.description);
+      setImage_url(data.image_url);
     };
     getDataById();
   }, [id]);
@@ -32,9 +34,11 @@ const EditProduct = () => {
       title: title,
       price: price,
       description: description,
+      image_url: image_url,
       published: true,
     };
     await axios.put(`/api/products/${id}`, data);
+    alert("Information saved successfully!");
     // history.push("/products");
   };
   // console.log(title);
@@ -69,6 +73,15 @@ const EditProduct = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               as="textarea"
+              rows={3}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Label>Image URL</Form.Label>
+            <Form.Control
+              value={image_url}
+              onChange={(e) => setImage_url(e.target.value)}
+              type="text"
               rows={3}
             />
           </Form.Group>
