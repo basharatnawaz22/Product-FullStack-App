@@ -1,8 +1,8 @@
 module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "Database@22432",
-  DB: "node_sequelize_api_db",
+  HOST: "beq5fga4iw81mpcn2zfo-mysql.services.clever-cloud.com",
+  USER: "uuyi8jywaz7gmmeo",
+  PASSWORD: "lsLOKzQYLEnEvDsGkAzF",
+  DB: "beq5fga4iw81mpcn2zfo",
   dialect: "mysql",
 
   pool: {
