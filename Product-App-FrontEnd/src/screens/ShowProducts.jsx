@@ -8,7 +8,7 @@ const ShowProducts = () => {
 
   useEffect(() => {
     const getProductsData = async () => {
-      const { data } = await axios.get("api/products/allProducts");
+      const { data } = await axios.get("/api/products/allproducts");
       //   console.log(data);
       setProducts(data);
     };
